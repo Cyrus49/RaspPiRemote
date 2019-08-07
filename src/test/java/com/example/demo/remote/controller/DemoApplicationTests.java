@@ -1,11 +1,10 @@
-package com.example.demo.remote;
+package com.example.demo.remote.controller;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
-import remote.DemoApplication;
-import remote.RemoteController;
+import remote.controller.RemoteController;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes= RemoteController.class)
