@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestBody;
-import remote.Remote;
+import remote.RemoteService;
 
 
 @RestController
@@ -17,9 +17,11 @@ public class RemoteController {
         return "Whyfff";
     }
     @PutMapping("/control")
-    public String control(@RequestBody int control){
-        Remote remote = new Remote();
+    public String control(@RequestBody int control,
+                          @RequestBody String password){
+        RemoteService remote = new RemoteService();
         System.out.println(control);
+        remote.processControl(control,password);
         return Integer.toString(control);
     }
 
